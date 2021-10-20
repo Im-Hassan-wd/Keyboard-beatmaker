@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app h1 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.app p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.visual {
+  /* display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px; */
+  display: flex;
+}
+
+.visual .pad {
+  width: 100px;
+  margin: 0 5px;
+  height: 0;
+}
+
+.pad.active {
+  height: 300px;
+}
+
+.pad-1 {
+  background: rgb(228, 49, 73);
+}
+.pad-2 {
+  background: rgb(228, 49, 159);
+}
+.pad-3 {
+  background: rgb(228, 100, 49);
+}
+.pad-4 {
+  background: rgb(49, 118, 228);
+}
+.pad-5 {
+  background: rgb(100, 228, 49);
+}
+
+@keyframes slide {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  input {
+    display: block;
+  }
+}
