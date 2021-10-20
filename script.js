@@ -1,17 +1,22 @@
 const tones = document.querySelectorAll('audio');
 const visual = document.querySelector(".visual");
 const pads = document.querySelectorAll(".pad");
+const tempoSlider = document.querySelector(".tempo-slider");
+const tempoText = document.querySelector('.tempo-nr');
 
-window.addEventListener("keydown", function(e){
-    drumKit(e);
-});
-window.addEventListener("keyup", removePad)
+window.addEventListener("keydown", function(e) {drumKit(e)} );
+window.addEventListener("keyup", removePad);
+tempoSlider.addEventListener("input", function(e) {updateTempo(e)});
 
 function removePad() {
     pads.forEach(pad => {
         pad.classList.remove("active");
-    })
+    });
 }
+
+function updateTempo(e){
+    tempoText.innerText = e.target.value;
+} 
 
 function drumKit(e) {
     const key = e.key;
@@ -122,7 +127,7 @@ function drumKit(e) {
         case 'u':
             tones[20].currentTime = 0;              
             tones[20].play();
-            pads[5].classList.add("active");
+            pads[4].classList.add("active");
             break;
         case 'v':
             tones[21].currentTime = 0;              

@@ -28,6 +28,17 @@
   font-weight: 400;
 }
 
+.tempo-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background: #200312;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
 .visual {
   /* display: grid;
   grid-template-columns: repeat(12, 1fr);
